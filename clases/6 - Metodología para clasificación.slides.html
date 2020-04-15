@@ -15027,6 +15027,8 @@ $$F_1 = \frac{2 \cdot  precision \cdot recall}{ precision + recall}$$<ul>
 <p>Se calcula la medida por clase, y luego se promedia los valores obtenidos (macro average)</p>
 <p>Se calcula la medida por clase teniendo en cuenta el aporte de instancias cada clase (micro average)</p>
 </li>
+<li><p>Lo usual es calcular ambas, y analizar según mi problema</p>
+</li>
 </ul>
 
 </div>
@@ -15078,6 +15080,13 @@ $$F_1 = \frac{2 \cdot  precision \cdot recall}{ precision + recall}$$<ul>
 <li><p>La micro-average será $ \frac{1+10+1+1}{2+100+2+2} = 0.22 $</p>
 </li>
 <li><p>Puede verse que la micro-average es menor, porque lo mal que nos fue en la clase B hace que el promedio baje, porque es una clase mucho más grande que las demás.</p>
+</li>
+<li><p>Qué medida es más "útil", como toda medida, <strong>depende de lo que queremos evaluar</strong>:</p>
+<ul>
+<li>La micro-average da más peso a las clases grandes en el análisis general</li>
+<li>La macro-average permite evaluar mejor que tan "equilibrado" es el comportamiento de mi clasificador </li>
+<li>En lo posible, reportar ambas y analizar según mi problema</li>
+</ul>
 </li>
 </ul>
 
